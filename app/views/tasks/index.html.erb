@@ -9,7 +9,8 @@
   <li>
     <h2>Description: <%= link_to task.description, task_path(task) %></h2>
     <h3>Done? <%= task.done %></h3>
-    <p><%= link_to "Click to delete", task_path(task), method: :delete, data: { confirm: "Are you sure?" } %></p>
+    <p><%= link_to "Click to edit", edit_task_path(task), method: :get, data: { confirm: "Are you sure to edit?" } %></p>
+    <p><%= link_to "Click to delete", task_path(task), method: :delete, data: { confirm: "Are you sure to delete?" } %></p>
     <hr>
   </li>
   <% end %>
